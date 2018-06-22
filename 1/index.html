@@ -2,39 +2,72 @@
     <head>
         <style>
             div {
-                text-align: center
+                text-align: center;
+                width: 200px;
+                margin: 0 auto;
             }
-            p {
+            h3 {
                 font-size: 40px;
+                font-weight:100;
                 margin-top: 150px;
                 letter-spacing: 3px;
+                padding-bottom: 10px;
+                
+                transition:color 1s;
+                -moz-transition:color 1s; /* Firefox 4 */
+                -webkit-transition:color 1s; /* Safari and Chrome */
+                -o-transition:color 1s; /* Opera */
+            }
+            p {
+                text-align: center;
+                width: 0px;
+                border-bottom: 3px solid #c679c2;
+                margin: 0 auto;
+            
+                transition:width 1s;
+                -moz-transition:width 1s; /* Firefox 4 */
+                -webkit-transition:width 1s; /* Safari and Chrome */
+                -o-transition:width 1s; /* Opera */
             }
             button {
                 text-align: center;
-                margin-top: 50px;
                 height: 40px;
                 width: 160px;
                 border:1px solid gray;
+                font-size: 20px;
+                letter-spacing: 2px;
+                outline:none;          /*去掉button的hover和点击时的边框*/
                 
                 border-radius: 10px;
                 -webkit-border-radius:10px;
                 -moz-border-radius:10px;
                 
-                font-size: 20px;
-                letter-spacing: 2px;
+                position: absolute;
+                top: 300px;
+                margin-left: -80px;
             }
         </style>
     </head>
     <body>
         <div>
-            <p>喵喵喵喵</p>
+            <h3>喵喵喵喵</h3>
+            <p></p>
             <button>切换样式</button>
         </div>
         
         <script>
+            var status = 0;
             var btn = document.getElementsByTagName('button')[0];
             btn.onclick = function(){ 
-                alert(2);
+                if(status == 0) {
+                    document.getElementsByTagName('h3')[0].style.color = '#c679c2';
+                    document.getElementsByTagName('p')[0].style.width = '160px';
+                    status = 1;
+                } else {
+                    document.getElementsByTagName('h3')[0].style.color = '#111111';
+                    document.getElementsByTagName('p')[0].style.width = '0';
+                    status = 0;
+                }
             }
         </script>
     </body>
