@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <style>
+            div {
+                text-align: center
+            }
+            p {
+                font-size: 40px;
+                margin-top: 150px;
+                letter-spacing: 3px;
+            }
+            button {
+                text-align: center;
+                margin-top: 50px;
+                height: 40px;
+                width: 160px;
+                border:1px solid gray;
+                
+                border-radius: 10px;
+                -webkit-border-radius:10px;
+                -moz-border-radius:10px;
+                
+                font-size: 20px;
+                letter-spacing: 2px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <p>喵喵喵喵</p>
+            <button>切换样式</button>
+        </div>
+        
+        <script>
+            var btn = document.getElementsByTagName('button')[0];
+            btn.onclick = function(){ 
+                alert(2);
+            }
+        </script>
+    </body>
+</html>
